@@ -1,0 +1,5 @@
+near_term = [
+  "Answer 6 founder decisions to unblock Sprint 1",
+  "Build Sprint 1 foundation: SvelteKit scaffold, Supabase setup, base layout, hero section",
+  "Complete all 6 sprints (23 total issues) to launch muse.noranshine.com",
+]

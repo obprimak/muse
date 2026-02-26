@@ -1,0 +1,17 @@
+name = "Muse by Noran Shine"
+description = "A luxury boudoir photography website for Noran Shine Studio at muse.noranshine.com. Distinct dark editorial brand identity from noranshine.com. Features AI chat assistant, style quiz, readiness quiz, privacy-first gallery, and booking flow."
+website = "https://muse.noranshine.com"
+repo = "obprimak/muse"
+stack = "SvelteKit, Tailwind CSS, Supabase, Vercel, Resend, OpenAI (gpt-4o-mini), MDsveX, PostHog"
+
+[decisions]
+video_hosting = "Self-hosted MP4/WebM in /static/videos/ — keep under 15MB, encode H.264 + VP9"
+headline_font = "Cormorant Garamond (headings) + Inter (body)"
+accent_color = "Slate + gold + blush pink #d4a0a0 — used sparingly for hover states and soft accents"
+quiz_content = "Team drafts examples based on best practices; founder reviews and tweaks before publish"
+chat_knowledge_base = "Adapt noranshine.com FAQ for boudoir context; founder reviews and may add content"
+privacy_policy = "Founder will provide existing privacy policy text; team adjusts for boudoir context"
+
+[brand]
+palette = "Dark slate background, gold accents, blush pink highlights"
+voice = "Elegant, inspiring, trust-first — see brand guide (uploaded by founder)"
