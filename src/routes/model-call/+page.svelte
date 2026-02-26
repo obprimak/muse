@@ -3,6 +3,42 @@
 
 	let formResult: { success?: boolean; error?: string } | null = $state(null);
 	let submitting = $state(false);
+
+	const galleryItems = [
+		{ file: 'gallery-01.jpg', style: 'Bare Elegance', alt: 'Pearl drape with red curtain backdrop' },
+		{ file: 'gallery-02.jpg', style: 'Bare Elegance', alt: 'Dramatic dark bodyscape with red heels' },
+		{ file: 'gallery-03.jpg', style: 'Bold & Editorial', alt: 'Red circle chair with fishnet stockings' },
+		{ file: 'gallery-04.jpg', style: 'Old Hollywood', alt: 'Masked woman with red curtain, theatrical' },
+		{ file: 'gallery-05.jpg', style: 'Bare Elegance', alt: 'Back silhouette with red lingerie' },
+		{ file: 'gallery-06.jpg', style: 'Bold & Editorial', alt: 'Black and white dramatic portrait' },
+		{ file: 'gallery-07.jpg', style: 'Classic Elegance', alt: 'Window light silhouette in black and white' },
+		{ file: 'gallery-08.jpg', style: 'Classic Elegance', alt: 'Beauty close-up in warm tones' },
+		{ file: 'gallery-09.jpg', style: 'Old Hollywood', alt: 'Gold curtain with warm amber and black lace' },
+		{ file: 'gallery-10.jpg', style: 'Bold & Editorial', alt: 'Red lingerie with black wings, empowered' },
+		{ file: 'gallery-11.jpg', style: 'Bare Elegance', alt: 'Back silhouette with pearl cascade' },
+		{ file: 'gallery-12.jpg', style: 'Soft Romance', alt: 'Pink robe with floral backdrop' },
+		{ file: 'gallery-13.jpg', style: 'Soft Romance', alt: 'Smiling woman on bed, warm and approachable' },
+		{ file: 'gallery-14.jpg', style: 'Old Hollywood', alt: 'Pink tulle with theatrical amber lighting' },
+		{ file: 'gallery-15.jpg', style: 'Bold & Editorial', alt: 'Plus-size woman in fur coat' },
+		{
+			file: 'gallery-16.jpg',
+			style: 'Classic Elegance',
+			alt: 'Elegant woman in ruffled leather coat, editorial confidence'
+		}
+	];
+
+	const collages = [
+		{ file: 'collage-01.jpg', alt: 'Eleonora: casual to warm boudoir portrait in pink lace' },
+		{ file: 'collage-02.jpg', alt: 'Kristina: casual to dreamy pink tulle robe, soft floral' },
+		{
+			file: 'collage-03.jpg',
+			alt: 'Lyudmila: everyday to dramatic glam with pearls and fur stole'
+		},
+		{
+			file: 'collage-04.jpg',
+			alt: 'Tatiana: casual to ethereal maternity in flowing white fabric'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -22,19 +58,7 @@
      SECTION 1 — HERO
      ════════════════════════════════════════════════════════ -->
 <section class="relative flex min-h-screen items-center justify-center overflow-hidden">
-	<!-- Background video with image fallback -->
-	<video
-		autoplay
-		muted
-		loop
-		playsinline
-		poster="/images/model-call/hero.jpg"
-		class="absolute inset-0 h-full w-full object-cover"
-	>
-		<source src="/videos/model-call-hero.mp4" type="video/mp4" />
-	</video>
-
-	<!-- Fallback image (shows if video fails or before load) -->
+	<!-- Hero background image (video pending from founder) -->
 	<img
 		src="/images/model-call/hero.jpg"
 		alt=""
@@ -68,22 +92,35 @@
 <!-- ════════════════════════════════════════════════════════
      SECTION 2 — THE INVITATION
      ════════════════════════════════════════════════════════ -->
-<section class="bg-slate-950 px-6 py-24 md:py-32">
-	<div class="mx-auto max-w-3xl text-center">
-		<h2 class="text-gold">
-			This is not a photoshoot. It's a <span class="text-gold-300">transformation</span>.
-		</h2>
-		<div class="mt-10 space-y-6 text-base leading-relaxed text-slate-300 md:text-lg">
-			<p>
-				We're selecting a few women for an exclusive creative session at Muse by Noran Shine
-				Studio in Lithia, FL. Not models. Not performers. Real women — all ages, all sizes —
-				who are ready to discover something new about themselves.
-			</p>
-			<p>
-				We need to test new sets and props, expand our studio portfolio, and create updated
-				marketing materials. Your story becomes our art. And the portraits you receive will be
-				unlike anything you've ever seen of yourself.
-			</p>
+<section class="relative bg-slate-950 px-6 py-24 md:py-32">
+	<div class="mx-auto max-w-4xl md:flex md:items-center md:gap-12">
+		<!-- Atmospheric accent image -->
+		<div class="mb-8 hidden flex-shrink-0 md:mb-0 md:block md:w-1/3">
+			<img
+				src="/images/model-call/section-candles.jpg"
+				alt="Warm candlelight and gold curtains in the studio"
+				loading="lazy"
+				class="w-full rounded-sm object-cover"
+				style="aspect-ratio: 3/4"
+			/>
+		</div>
+
+		<div class="text-center md:w-2/3 md:text-left">
+			<h2 class="text-gold">
+				This is not a photoshoot. It's a <span class="text-gold-300">transformation</span>.
+			</h2>
+			<div class="mt-10 space-y-6 text-base leading-relaxed text-slate-300 md:text-lg">
+				<p>
+					We're selecting a few women for an exclusive creative session at Muse by Noran
+					Shine Studio in Lithia, FL. Not models. Not performers. Real women — all ages,
+					all sizes — who are ready to discover something new about themselves.
+				</p>
+				<p>
+					We need to test new sets and props, expand our studio portfolio, and create
+					updated marketing materials. Your story becomes our art. And the portraits you
+					receive will be unlike anything you've ever seen of yourself.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
@@ -110,6 +147,24 @@
 				</li>
 			{/each}
 		</ul>
+
+		<!-- Product showcase -->
+		<div class="mt-12 grid gap-4 md:grid-cols-2">
+			<img
+				src="/images/model-call/product-framed.jpg"
+				alt="Framed portrait with vintage cameras on shelf"
+				loading="lazy"
+				class="w-full rounded-sm object-cover"
+				style="aspect-ratio: 4/3"
+			/>
+			<img
+				src="/images/model-call/product-print.jpg"
+				alt="Portrait print and album on table"
+				loading="lazy"
+				class="w-full rounded-sm object-cover"
+				style="aspect-ratio: 4/3"
+			/>
+		</div>
 
 		<p class="mt-12 text-center text-sm italic text-cream-50/80">
 			The only cost is $230 for professional hair &amp; makeup — paid upfront to confirm your
@@ -165,27 +220,20 @@
 		<h2 class="text-center text-gold">Every woman has a style. We'll find yours.</h2>
 
 		<div class="mt-12 columns-2 gap-4 md:columns-3 lg:columns-4">
-			{#each Array.from({ length: 15 }, (_, i) => i + 1) as n}
-				{@const styles = [
-					'Classic Elegance',
-					'Old Hollywood',
-					'Bold & Editorial',
-					'Soft Romance',
-					'Bare Elegance'
-				]}
+			{#each galleryItems as { file, style, alt }, i}
 				<div class="group relative mb-4 overflow-hidden break-inside-avoid">
 					<img
-						src="/images/model-call/gallery-{String(n).padStart(2, '0')}.jpg"
-						alt="Boudoir photography style example {n}"
+						src="/images/model-call/{file}"
+						{alt}
 						loading="lazy"
 						class="w-full rounded-sm bg-slate-800 object-cover transition-transform duration-500 group-hover:scale-105"
-						style="aspect-ratio: {n % 3 === 0 ? '3/4' : n % 3 === 1 ? '4/5' : '2/3'}"
+						style="aspect-ratio: {i % 3 === 0 ? '3/4' : i % 3 === 1 ? '4/5' : '2/3'}"
 					/>
 					<div
 						class="absolute inset-0 flex items-end bg-gradient-to-t from-slate-950/80 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 					>
 						<span class="p-4 font-serif text-sm tracking-wide text-gold">
-							{styles[(n - 1) % styles.length]}
+							{style}
 						</span>
 					</div>
 				</div>
@@ -199,14 +247,13 @@
      ════════════════════════════════════════════════════════ -->
 <section class="bg-slate-950 px-6 py-24 md:py-32">
 	<div class="mx-auto max-w-4xl md:flex md:items-center md:gap-12">
-		<!-- Portrait -->
+		<!-- Portrait (pending from founder) -->
 		<div class="mb-8 flex-shrink-0 md:mb-0">
-			<img
-				src="/images/model-call/olga.jpg"
-				alt="Olga, photographer and founder of Muse by Noran Shine"
-				loading="lazy"
-				class="mx-auto h-64 w-64 rounded-full border-2 border-gold/30 object-cover md:h-80 md:w-80"
-			/>
+			<div
+				class="mx-auto flex h-64 w-64 items-center justify-center rounded-full border-2 border-gold/30 bg-slate-900 md:h-80 md:w-80"
+			>
+				<span class="text-center font-serif text-sm italic text-slate-500">Photo coming soon</span>
+			</div>
 		</div>
 
 		<!-- Bio -->
@@ -239,12 +286,12 @@
 		<h2 class="text-gold">You already have everything you need.</h2>
 		<p class="mt-4 text-lg text-slate-400">The woman you already are — finally seen.</p>
 
-		<div class="mt-12 grid gap-6 md:grid-cols-3">
-			{#each [1, 2, 3] as n}
+		<div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+			{#each collages as { file, alt }}
 				<div class="overflow-hidden rounded-sm">
 					<img
-						src="/images/model-call/collage-{String(n).padStart(2, '0')}.jpg"
-						alt="Client transformation portrait {n}"
+						src="/images/model-call/{file}"
+						{alt}
 						loading="lazy"
 						class="w-full bg-slate-800 object-cover"
 						style="aspect-ratio: 3/4"
