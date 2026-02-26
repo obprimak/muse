@@ -247,12 +247,15 @@
      ════════════════════════════════════════════════════════ -->
 <section class="bg-slate-950 px-6 py-24 md:py-32">
 	<div class="mx-auto max-w-4xl md:flex md:items-center md:gap-12">
-		<!-- Portrait (pending from founder) -->
+		<!-- Portrait -->
 		<div class="mb-8 flex-shrink-0 md:mb-0">
-			<div
-				class="mx-auto flex h-64 w-64 items-center justify-center rounded-full border-2 border-gold/30 bg-slate-900 md:h-80 md:w-80"
-			>
-				<span class="text-center font-serif text-sm italic text-slate-500">Photo coming soon</span>
+			<div class="mx-auto h-64 w-64 overflow-hidden rounded-full border-2 border-gold/30 md:h-80 md:w-80">
+				<img
+					src="/images/model-call/olga.jpg"
+					alt="Olga, photographer and founder of Muse by Noran Shine"
+					loading="lazy"
+					class="h-full w-full object-cover object-top"
+				/>
 			</div>
 		</div>
 
