@@ -1,0 +1,563 @@
+<script lang="ts">
+	import { enhance } from '$app/forms';
+
+	let formResult: { success?: boolean; error?: string } | null = $state(null);
+	let submitting = $state(false);
+</script>
+
+<svelte:head>
+	<title>Become a Muse | Noran Shine Studio</title>
+	<meta
+		name="description"
+		content="Apply to be a muse at Noran Shine Studio in Lithia, FL. An exclusive creative boudoir session for real women — all ages, all sizes."
+	/>
+	<meta property="og:title" content="Become a Muse | Noran Shine Studio" />
+	<meta
+		property="og:description"
+		content="We're looking for women ready to be seen — beautifully, powerfully, and on their own terms."
+	/>
+</svelte:head>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 1 — HERO
+     ════════════════════════════════════════════════════════ -->
+<section class="relative flex min-h-screen items-center justify-center overflow-hidden">
+	<!-- Background video with image fallback -->
+	<video
+		autoplay
+		muted
+		loop
+		playsinline
+		poster="/images/model-call/hero.jpg"
+		class="absolute inset-0 h-full w-full object-cover"
+	>
+		<source src="/videos/model-call-hero.mp4" type="video/mp4" />
+	</video>
+
+	<!-- Fallback image (shows if video fails or before load) -->
+	<img
+		src="/images/model-call/hero.jpg"
+		alt=""
+		class="absolute inset-0 h-full w-full object-cover"
+		loading="eager"
+	/>
+
+	<!-- Dark overlay -->
+	<div class="absolute inset-0 bg-slate-950/80"></div>
+
+	<!-- Content -->
+	<div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+		<h1
+			class="font-serif text-5xl font-light leading-tight tracking-widest text-cream-50 md:text-7xl lg:text-8xl"
+		>
+			We Are Looking for Our Muses
+		</h1>
+		<p class="mx-auto mt-6 max-w-2xl text-lg text-slate-300 md:text-xl">
+			An invitation to women who are ready to be seen — beautifully, powerfully, and on their
+			own terms.
+		</p>
+		<a
+			href="#apply"
+			class="mt-10 inline-block border border-gold px-8 py-3 font-sans text-sm uppercase tracking-widest text-gold transition-all hover:bg-gold hover:text-slate-950"
+		>
+			Apply to be a Muse &rarr;
+		</a>
+	</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 2 — THE INVITATION
+     ════════════════════════════════════════════════════════ -->
+<section class="bg-slate-950 px-6 py-24 md:py-32">
+	<div class="mx-auto max-w-3xl text-center">
+		<h2 class="text-gold">
+			This is not a photoshoot. It's a <span class="text-gold-300">transformation</span>.
+		</h2>
+		<div class="mt-10 space-y-6 text-base leading-relaxed text-slate-300 md:text-lg">
+			<p>
+				We're selecting a few women for an exclusive creative session at Muse by Noran Shine
+				Studio in Lithia, FL. Not models. Not performers. Real women — all ages, all sizes —
+				who are ready to discover something new about themselves.
+			</p>
+			<p>
+				We need to test new sets and props, expand our studio portfolio, and create updated
+				marketing materials. Your story becomes our art. And the portraits you receive will be
+				unlike anything you've ever seen of yourself.
+			</p>
+		</div>
+	</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 3 — WHAT YOU RECEIVE
+     ════════════════════════════════════════════════════════ -->
+<section class="bg-slate-900 px-6 py-24 md:py-32">
+	<div class="mx-auto max-w-4xl">
+		<h2 class="text-center text-gold">Your Experience Includes</h2>
+
+		<ul class="mt-12 grid gap-6 md:grid-cols-2">
+			{#each [
+				'A private studio experience — full styling, wardrobe, and guided posing',
+				'Professional hair & makeup by our in-studio team',
+				'A cinematic slideshow reveal at the end of your session',
+				'3 fully retouched high-res portraits of your choice — yours to keep, forever',
+				'Behind-the-scenes content from your transformation (for you to share)',
+				'Membership in our exclusive referral program'
+			] as item}
+				<li class="flex items-start gap-4">
+					<span class="mt-1 text-lg text-gold">&#10022;</span>
+					<span class="text-slate-300">{item}</span>
+				</li>
+			{/each}
+		</ul>
+
+		<p class="mt-12 text-center text-sm italic text-cream-50/80">
+			The only cost is $230 for professional hair &amp; makeup — paid upfront to confirm your
+			session.<br />
+			If you fall in love with your portraits (most do), that $230 applies as a credit toward any
+			additional images.
+		</p>
+	</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 4 — WHAT WE ASK IN RETURN
+     ════════════════════════════════════════════════════════ -->
+<section class="bg-slate-950 px-6 py-24 md:py-32">
+	<div class="mx-auto max-w-3xl">
+		<h2 class="text-center text-gold">This is a creative collaboration.</h2>
+		<p class="mt-4 text-center text-lg text-slate-400">
+			In exchange for the full experience, we ask for:
+		</p>
+
+		<ul class="mt-10 space-y-4 text-slate-300">
+			{#each [
+				'Signed model release — covering all media created during your session',
+				'Images before, during, and after your session',
+				'Behind-the-scenes video: hair & makeup process',
+				'Behind-the-scenes video: your session',
+				'Behind-the-scenes video: the ordering & reveal experience',
+				'Images for our portfolio, social media, and in-studio samples (may include uncensored boudoir images — for professional use only)',
+				'A Google, Facebook, or website review / testimonial',
+				'A short video testimonial',
+				'Blog post or guest blog contribution',
+				'Word-of-mouth referrals'
+			] as item}
+				<li class="flex items-start gap-3">
+					<span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold"></span>
+					<span>{item}</span>
+				</li>
+			{/each}
+		</ul>
+
+		<p class="mt-10 text-center text-sm italic text-slate-400">
+			Everything is done with care and professionalism. You will see and approve everything
+			before it's used.
+		</p>
+	</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 5 — THE STYLES (Gallery)
+     ════════════════════════════════════════════════════════ -->
+<section class="bg-slate-900 px-6 py-24 md:py-32">
+	<div class="mx-auto max-w-6xl">
+		<h2 class="text-center text-gold">Every woman has a style. We'll find yours.</h2>
+
+		<div class="mt-12 columns-2 gap-4 md:columns-3 lg:columns-4">
+			{#each Array.from({ length: 15 }, (_, i) => i + 1) as n}
+				{@const styles = [
+					'Classic Elegance',
+					'Old Hollywood',
+					'Bold & Editorial',
+					'Soft Romance',
+					'Bare Elegance'
+				]}
+				<div class="group relative mb-4 overflow-hidden break-inside-avoid">
+					<img
+						src="/images/model-call/gallery-{String(n).padStart(2, '0')}.jpg"
+						alt="Boudoir photography style example {n}"
+						loading="lazy"
+						class="w-full rounded-sm bg-slate-800 object-cover transition-transform duration-500 group-hover:scale-105"
+						style="aspect-ratio: {n % 3 === 0 ? '3/4' : n % 3 === 1 ? '4/5' : '2/3'}"
+					/>
+					<div
+						class="absolute inset-0 flex items-end bg-gradient-to-t from-slate-950/80 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+					>
+						<span class="p-4 font-serif text-sm tracking-wide text-gold">
+							{styles[(n - 1) % styles.length]}
+						</span>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 6 — A NOTE FROM OLGA
+     ════════════════════════════════════════════════════════ -->
+<section class="bg-slate-950 px-6 py-24 md:py-32">
+	<div class="mx-auto max-w-4xl md:flex md:items-center md:gap-12">
+		<!-- Portrait -->
+		<div class="mb-8 flex-shrink-0 md:mb-0">
+			<img
+				src="/images/model-call/olga.jpg"
+				alt="Olga, photographer and founder of Muse by Noran Shine"
+				loading="lazy"
+				class="mx-auto h-64 w-64 rounded-full border-2 border-gold/30 object-cover md:h-80 md:w-80"
+			/>
+		</div>
+
+		<!-- Bio -->
+		<div>
+			<h2 class="text-gold">I see you — before the lens ever does.</h2>
+			<div class="mt-6 space-y-4 text-base leading-relaxed text-slate-300">
+				<p>
+					I'm Olga — the photographer and founder of Muse by Noran Shine. I've spent years
+					helping women discover something they didn't expect to find: themselves.
+				</p>
+				<p>
+					In my studio in Lithia, FL, I create a space where you can exhale. Where the
+					lighting is soft, the pace is slow, and every moment is designed around you — not
+					a shot list.
+				</p>
+				<p>
+					These sessions aren't about the final image. They're about who you become in the
+					process of creating it.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 7 — THE TRANSFORMATION
+     ════════════════════════════════════════════════════════ -->
+<section class="bg-slate-900 px-6 py-24 md:py-32">
+	<div class="mx-auto max-w-4xl text-center">
+		<h2 class="text-gold">You already have everything you need.</h2>
+		<p class="mt-4 text-lg text-slate-400">The woman you already are — finally seen.</p>
+
+		<div class="mt-12 grid gap-6 md:grid-cols-3">
+			{#each [1, 2, 3] as n}
+				<div class="overflow-hidden rounded-sm">
+					<img
+						src="/images/model-call/collage-{String(n).padStart(2, '0')}.jpg"
+						alt="Client transformation portrait {n}"
+						loading="lazy"
+						class="w-full bg-slate-800 object-cover"
+						style="aspect-ratio: 3/4"
+					/>
+				</div>
+			{/each}
+		</div>
+
+		<p class="mt-8 text-sm italic text-slate-500">Real women. Real transformations.</p>
+	</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 8 — APPLY FORM
+     ════════════════════════════════════════════════════════ -->
+<section id="apply" class="scroll-mt-20 bg-slate-950 px-6 py-24 md:py-32">
+	<div class="mx-auto max-w-2xl">
+		<h2 class="text-center text-gold">Ready to become a Muse?</h2>
+		<p class="mt-4 text-center text-slate-400">
+			Spots are limited. We review every application personally.
+		</p>
+
+		{#if formResult?.success}
+			<div class="mt-12 rounded-sm border border-gold/30 bg-slate-900 p-8 text-center">
+				<p class="font-serif text-2xl text-gold">Thank you!</p>
+				<p class="mt-3 text-slate-300">
+					We'll be in touch personally. Keep an eye on your inbox.
+				</p>
+			</div>
+		{:else}
+			<form
+				method="POST"
+				action="?/apply"
+				class="mt-12 space-y-6"
+				use:enhance={() => {
+					submitting = true;
+					return async ({ result, update }) => {
+						submitting = false;
+						if (result.type === 'success') {
+							formResult = { success: true };
+						} else if (result.type === 'failure') {
+							const msg = (result.data as { message?: string })?.message;
+							formResult = { error: msg ?? 'Something went wrong. Please try again.' };
+							await update();
+						} else {
+							await update();
+						}
+					};
+				}}
+			>
+				{#if formResult?.error}
+					<div class="rounded-sm border border-blush/50 bg-blush-900/20 px-4 py-3 text-sm text-blush-200">
+						{formResult.error}
+					</div>
+				{/if}
+
+				<!-- Name -->
+				<div class="grid gap-4 md:grid-cols-2">
+					<div>
+						<label for="firstName" class="mb-1 block text-sm text-slate-400"
+							>First Name <span class="text-gold">*</span></label
+						>
+						<input
+							type="text"
+							id="firstName"
+							name="firstName"
+							required
+							class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 placeholder-slate-600 transition-colors focus:border-gold focus:outline-none"
+						/>
+					</div>
+					<div>
+						<label for="lastName" class="mb-1 block text-sm text-slate-400"
+							>Last Name <span class="text-gold">*</span></label
+						>
+						<input
+							type="text"
+							id="lastName"
+							name="lastName"
+							required
+							class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 placeholder-slate-600 transition-colors focus:border-gold focus:outline-none"
+						/>
+					</div>
+				</div>
+
+				<!-- Email & Phone -->
+				<div class="grid gap-4 md:grid-cols-2">
+					<div>
+						<label for="email" class="mb-1 block text-sm text-slate-400"
+							>Email Address <span class="text-gold">*</span></label
+						>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							required
+							class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 placeholder-slate-600 transition-colors focus:border-gold focus:outline-none"
+						/>
+					</div>
+					<div>
+						<label for="phone" class="mb-1 block text-sm text-slate-400"
+							>Phone Number <span class="text-gold">*</span></label
+						>
+						<input
+							type="tel"
+							id="phone"
+							name="phone"
+							required
+							class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 placeholder-slate-600 transition-colors focus:border-gold focus:outline-none"
+						/>
+					</div>
+				</div>
+
+				<!-- City & Travel -->
+				<div class="grid gap-4 md:grid-cols-2">
+					<div>
+						<label for="cityState" class="mb-1 block text-sm text-slate-400"
+							>City &amp; State <span class="text-gold">*</span></label
+						>
+						<input
+							type="text"
+							id="cityState"
+							name="cityState"
+							required
+							placeholder="e.g. Tampa, FL"
+							class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 placeholder-slate-600 transition-colors focus:border-gold focus:outline-none"
+						/>
+					</div>
+					<fieldset>
+						<legend class="mb-1 text-sm text-slate-400"
+							>Able to travel to Lithia, FL? <span class="text-gold">*</span></legend
+						>
+						<div class="flex gap-4 pt-2">
+							{#each ['Yes', 'No', 'Maybe'] as option}
+								<label class="flex items-center gap-2 text-sm text-slate-300">
+									<input
+										type="radio"
+										name="canTravel"
+										value={option.toLowerCase()}
+										required
+										class="accent-gold-400"
+									/>
+									{option}
+								</label>
+							{/each}
+						</div>
+					</fieldset>
+				</div>
+
+				<!-- Age & Size -->
+				<div class="grid gap-4 md:grid-cols-2">
+					<div>
+						<label for="age" class="mb-1 block text-sm text-slate-400"
+							>Age <span class="text-gold">*</span></label
+						>
+						<select
+							id="age"
+							name="age"
+							required
+							class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 transition-colors focus:border-gold focus:outline-none"
+						>
+							<option value="" disabled selected>Select age range</option>
+							<option value="18-24">18–24</option>
+							<option value="25-34">25–34</option>
+							<option value="35-44">35–44</option>
+							<option value="45-54">45–54</option>
+							<option value="55-64">55–64</option>
+							<option value="65+">65+</option>
+						</select>
+					</div>
+					<div>
+						<label for="clothingSize" class="mb-1 block text-sm text-slate-400"
+							>Clothing Size <span class="text-slate-600">(optional)</span></label
+						>
+						<select
+							id="clothingSize"
+							name="clothingSize"
+							class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 transition-colors focus:border-gold focus:outline-none"
+						>
+							<option value="" selected>Prefer not to say</option>
+							<option value="XS">XS</option>
+							<option value="S">S</option>
+							<option value="M">M</option>
+							<option value="L">L</option>
+							<option value="XL">XL</option>
+							<option value="XXL">XXL</option>
+							<option value="Plus">Plus size</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- What this means to you -->
+				<div>
+					<label for="meaningToYou" class="mb-1 block text-sm text-slate-400"
+						>What would this experience mean to you? <span class="text-gold">*</span
+						></label
+					>
+					<textarea
+						id="meaningToYou"
+						name="meaningToYou"
+						required
+						rows="4"
+						class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 placeholder-slate-600 transition-colors focus:border-gold focus:outline-none"
+					></textarea>
+				</div>
+
+				<!-- What drew you -->
+				<div>
+					<label for="whatDrewYou" class="mb-1 block text-sm text-slate-400"
+						>What drew you to apply? <span class="text-gold">*</span></label
+					>
+					<textarea
+						id="whatDrewYou"
+						name="whatDrewYou"
+						required
+						rows="3"
+						class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 placeholder-slate-600 transition-colors focus:border-gold focus:outline-none"
+					></textarea>
+				</div>
+
+				<!-- Styles -->
+				<fieldset>
+					<legend class="mb-3 text-sm text-slate-400">Which styles speak to you?</legend>
+					<div class="flex flex-wrap gap-4">
+						{#each ['Classic Elegance', 'Old Hollywood', 'Bold & Editorial', 'Soft Romance', 'Bare Elegance'] as style}
+							<label class="flex items-center gap-2 text-sm text-slate-300">
+								<input
+									type="checkbox"
+									name="styles"
+									value={style}
+									class="accent-gold-400"
+								/>
+								{style}
+							</label>
+						{/each}
+					</div>
+				</fieldset>
+
+				<!-- Instagram -->
+				<div>
+					<label for="socialHandle" class="mb-1 block text-sm text-slate-400"
+						>Instagram or social handle <span class="text-slate-600">(optional)</span
+						></label
+					>
+					<input
+						type="text"
+						id="socialHandle"
+						name="socialHandle"
+						placeholder="@yourusername"
+						class="w-full border border-slate-700 bg-slate-900 px-4 py-3 text-slate-200 placeholder-slate-600 transition-colors focus:border-gold focus:outline-none"
+					/>
+				</div>
+
+				<!-- Investment acknowledgment -->
+				<label class="flex items-start gap-3 text-sm text-slate-300">
+					<input
+						type="checkbox"
+						name="investmentAck"
+						required
+						class="mt-1 accent-gold-400"
+					/>
+					<span>
+						I understand that a $230 hair &amp; makeup investment is required upfront to
+						confirm my session. This amount applies as a credit toward any portrait
+						package I choose. <span class="text-gold">*</span>
+					</span>
+				</label>
+
+				<!-- Best time -->
+				<fieldset>
+					<legend class="mb-2 text-sm text-slate-400"
+						>Best time to reach you <span class="text-gold">*</span></legend
+					>
+					<div class="flex gap-6">
+						{#each ['Morning', 'Afternoon', 'Evening'] as time}
+							<label class="flex items-center gap-2 text-sm text-slate-300">
+								<input
+									type="radio"
+									name="bestTime"
+									value={time.toLowerCase()}
+									required
+									class="accent-gold-400"
+								/>
+								{time}
+							</label>
+						{/each}
+					</div>
+				</fieldset>
+
+				<!-- Ready within 4 weeks -->
+				<label class="flex items-start gap-3 text-sm text-slate-300">
+					<input
+						type="checkbox"
+						name="readyWithin4Weeks"
+						required
+						class="mt-1 accent-gold-400"
+					/>
+					<span>
+						If selected, I am ready to move forward within 4 weeks.
+						<span class="text-gold">*</span>
+					</span>
+				</label>
+
+				<!-- Submit -->
+				<div class="pt-4 text-center">
+					<button
+						type="submit"
+						disabled={submitting}
+						class="inline-block border border-gold px-10 py-3 text-sm uppercase tracking-widest text-gold transition-all hover:bg-gold hover:text-slate-950 disabled:cursor-not-allowed disabled:opacity-50"
+					>
+						{submitting ? 'Submitting...' : 'Submit My Application'}
+					</button>
+				</div>
+			</form>
+		{/if}
+	</div>
+</section>
