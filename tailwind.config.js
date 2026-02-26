@@ -2,6 +2,7 @@ import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+	darkMode: 'class',
 	content: ['./src/**/*.{html,js,svelte,ts,svx}'],
 	theme: {
 		extend: {
@@ -39,7 +40,19 @@ export default {
 					700: '#6b3838',
 					800: '#4d2828',
 					900: '#301919'
+				},
+				cream: {
+					DEFAULT: '#f5f0e8',
+					50: '#faf8f4'
 				}
+			},
+			backgroundImage: {
+				'luxury-gradient': 'linear-gradient(135deg, #0c0f1a 0%, #1a1f2e 50%, #334155 100%)',
+				'card-gradient': 'linear-gradient(135deg, #0c0f1a 0%, #1a1f2e 100%)',
+				'gold-gradient': 'linear-gradient(135deg, #b08f3a 0%, #c9a84c 50%, #ecc354 100%)'
+			},
+			letterSpacing: {
+				editorial: '0.08em'
 			}
 		}
 	},
