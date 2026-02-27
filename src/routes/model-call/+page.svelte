@@ -59,23 +59,24 @@
      SECTION 1 — HERO
      ════════════════════════════════════════════════════════ -->
 <section class="relative flex min-h-screen items-center justify-center overflow-hidden">
-	<!-- Hero background image (video pending from founder) -->
+	<!-- Hero background image -->
 	<img
 		src="/images/model-call/hero.jpg"
 		alt=""
-		class="absolute inset-0 h-full w-full object-cover"
+		class="absolute inset-0 h-full w-full object-cover object-top"
 		loading="eager"
 	/>
 
 	<!-- Dark overlay -->
-	<div class="absolute inset-0 bg-slate-950/80"></div>
+	<div class="absolute inset-0 bg-slate-950/75"></div>
 
-	<!-- Hummingbird accent -->
-	<img
-		src="/brand/hummingbird-duo-left.jpg"
-		alt=""
-		class="pointer-events-none absolute bottom-0 right-0 max-w-[500px] opacity-20"
-	/>
+	<!-- Logo overlay — slightly left of center -->
+	<div class="absolute left-[43%] top-8 z-10 -translate-x-1/2 md:top-12">
+		<img src="/logo.png" alt="Noran Shine Photography Muse" class="w-56 md:w-72" />
+	</div>
+
+	<!-- Bottom fade into next section -->
+	<div class="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-slate-950"></div>
 
 	<!-- Content -->
 	<div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
@@ -84,13 +85,19 @@
 		>
 			We Are Looking for Our Muses
 		</h1>
+		<p
+			class="mt-4 font-serif text-2xl tracking-wide text-gold md:text-3xl"
+			style="font-family: 'Cormorant Garamond', serif;"
+		>
+			Be the Face of Our Next Creative Projects
+		</p>
 		<p class="mx-auto mt-6 max-w-2xl text-lg text-slate-300 md:text-xl">
 			An invitation to women who are ready to be seen — beautifully, powerfully, and on their
 			own terms.
 		</p>
 		<a
 			href="#apply"
-			class="mt-10 inline-block border border-gold px-8 py-3 font-sans text-sm uppercase tracking-widest text-gold transition-all hover:bg-gold hover:text-slate-950"
+			class="mt-10 inline-block rounded-full bg-gradient-to-r from-[#a8792a] via-[#c9a84c] to-[#d4b56a] px-10 py-3.5 font-sans text-sm uppercase tracking-widest text-slate-950 shadow-lg shadow-[#c9a84c]/25 transition-all hover:scale-105 hover:shadow-xl hover:shadow-[#c9a84c]/40"
 		>
 			Apply to be a Muse &rarr;
 		</a>
@@ -98,90 +105,171 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════
-     SECTION 2 — THE INVITATION
+     SECTION 2 — WHO I'M LOOKING FOR (hummingbird statement)
      ════════════════════════════════════════════════════════ -->
-<section class="relative bg-slate-950 px-6 py-24 md:py-32">
-	<div class="mx-auto max-w-4xl md:flex md:items-center md:gap-12">
-		<!-- Atmospheric accent image -->
-		<div class="mb-8 hidden flex-shrink-0 md:mb-0 md:block md:w-1/3">
-			<img
-				src="/images/model-call/section-candles.jpg"
-				alt="Warm candlelight and gold curtains in the studio"
-				loading="lazy"
-				class="w-full rounded-sm object-cover"
-				style="aspect-ratio: 3/4"
-			/>
-		</div>
+<section class="relative flex min-h-[65vh] items-center overflow-hidden">
+	<!-- Hummingbird background -->
+	<img
+		src="/brand/hummingbird-duo-left.jpg"
+		alt=""
+		class="absolute inset-0 h-full w-full object-cover object-left"
+		loading="lazy"
+	/>
 
-		<div class="text-center md:w-2/3 md:text-left">
-			<h2 class="text-gold">
-				This is not a photoshoot. It's a <span class="text-gold-300">transformation</span>.
-			</h2>
-			<div class="mt-10 space-y-6 text-base leading-relaxed text-slate-300 md:text-lg">
+	<!-- Gradient: lighter left (birds visible), darker right (text readable) -->
+	<div class="absolute inset-0 bg-gradient-to-r from-slate-950/20 via-slate-950/55 to-slate-950/88"></div>
+
+	<!-- Top fade — blends from hero -->
+	<div class="pointer-events-none absolute left-0 right-0 top-0 z-10 h-24 bg-gradient-to-b from-slate-950 to-transparent"></div>
+
+	<!-- Bottom fade into next section -->
+	<div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-950"></div>
+
+	<!-- Content: starts just after the birds (~50% from left) -->
+	<div class="relative z-10 w-full px-6 py-20 md:py-0">
+		<div class="mx-auto max-w-lg md:ml-[62%] md:max-w-sm lg:max-w-md">
+			<!-- Tagline -->
+			<p class="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+				Empowering &bull; Glam &bull; Boudoir Portraits &nbsp;&middot;&nbsp; Noran Shine Studio,
+				Lithia FL
+			</p>
+
+			<!-- Statement copy -->
+			<div class="space-y-5 font-serif text-lg leading-relaxed text-white/90 md:text-xl">
+				<p>Let me be direct — I am <em>not</em> searching for professional models.</p>
 				<p>
-					We're selecting a few women for an exclusive creative session at Muse by Noran
-					Shine Studio in Lithia, FL. Not models. Not performers. Real women — all ages,
-					all sizes — who are ready to discover something new about themselves.
+					I am looking for <span class="text-gold">real women</span>. Women in their 30s, 40s,
+					50s, and 60s — every shape, every story — ready to help bring my next creative vision
+					to life.
 				</p>
+				<p>And I am not a photographer still finding her way.</p>
 				<p>
-					We need to test new sets and props, expand our studio portfolio, and create
-					updated marketing materials. Your story becomes our art. And the portraits you
-					receive will be unlike anything you've ever seen of yourself.
+					I am a professional, certified, and published portrait artist — expanding into deeper,
+					more empowering photographic experiences for women. And I want <em>you</em> to be part
+					of it.
 				</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<SectionDivider />
-
 <!-- ════════════════════════════════════════════════════════
-     SECTION 3 — WHAT YOU RECEIVE
+     SECTION 3 — THE INVITATION (candlelight)
      ════════════════════════════════════════════════════════ -->
-<section class="bg-slate-900 px-6 py-24 md:py-32">
-	<div class="mx-auto max-w-4xl">
-		<h2 class="text-center text-gold">Your Experience Includes</h2>
+<section class="relative flex min-h-screen flex-col justify-start overflow-hidden">
+	<!-- Candlelight background -->
+	<img
+		src="/images/model-call/candlelight.jpg"
+		alt=""
+		class="absolute inset-0 h-full w-full object-cover object-[center_65%]"
+		loading="lazy"
+	/>
 
-		<ul class="mt-12 grid gap-6 md:grid-cols-2">
+	<!-- Dark mysterious overlay -->
+	<div class="absolute inset-0 bg-slate-950/65"></div>
+
+	<!-- Top fade — blends from hummingbird section -->
+	<div class="pointer-events-none absolute left-0 right-0 top-0 h-40 bg-gradient-to-b from-slate-950 to-transparent"></div>
+
+	<!-- Bottom fade into next section -->
+	<div class="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-slate-950"></div>
+
+	<!-- Content -->
+	<div class="relative z-10 mx-auto max-w-2xl px-6 pb-24 pt-44 text-center">
+		<p class="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+			This is your invitation to experience a full studio session at Noran Shine Studio
+		</p>
+
+		<p class="font-serif text-lg leading-relaxed text-white/80 md:text-xl">
+			Complimentary — in exchange for your participation in content creation and your permission
+			to share your story as part of our upcoming campaigns.
+		</p>
+
+		<p class="mt-6 font-serif text-base italic text-white/55">As a thank you, you will receive:</p>
+
+		<ul class="mt-12 space-y-14">
 			{#each [
-				'A private studio experience — full styling, wardrobe, and guided posing',
-				'Professional hair & makeup by our in-studio team',
-				'A cinematic slideshow reveal at the end of your session',
-				'3 fully retouched high-res portraits of your choice — yours to keep, forever',
-				'Behind-the-scenes content from your transformation (for you to share)',
-				'Membership in our exclusive referral program'
-			] as item}
-				<li class="flex items-start gap-4">
-					<span class="mt-1 text-lg text-gold">&#10022;</span>
-					<span class="text-slate-300">{item}</span>
+				{
+					title: 'Three beautifully retouched portraits',
+					desc: 'Full-resolution digital files of your choice — yours to keep, forever'
+				},
+				{
+					title: 'Your story, honoured',
+					desc: 'Shared through a personal interview and heartfelt testimonial'
+				},
+				{
+					title: 'Your transformation, captured',
+					desc: 'Behind-the-scenes imagery celebrating who you became'
+				}
+			] as { title, desc }}
+				<li class="space-y-3">
+					<div class="mx-auto h-px w-12 bg-gold/50"></div>
+					<p class="mt-4 font-serif text-2xl font-light tracking-wide text-gold md:text-3xl">
+						{title}
+					</p>
+					<p class="text-base leading-relaxed tracking-wide text-white/70">{desc}</p>
 				</li>
 			{/each}
 		</ul>
 
-		<!-- Product showcase -->
-		<div class="mt-12 grid gap-4 md:grid-cols-2">
-			<img
-				src="/images/model-call/product-framed.jpg"
-				alt="Framed portrait with vintage cameras on shelf"
-				loading="lazy"
-				class="w-full rounded-sm object-cover"
-				style="aspect-ratio: 4/3"
-			/>
-			<img
-				src="/images/model-call/product-print.jpg"
-				alt="Portrait print and album on table"
-				loading="lazy"
-				class="w-full rounded-sm object-cover"
-				style="aspect-ratio: 4/3"
-			/>
+		<div class="mt-14">
+			<a
+				href="#apply"
+				class="inline-block rounded-full bg-gradient-to-r from-[#a8792a] via-[#c9a84c] to-[#d4b56a] px-12 py-4 font-sans text-sm uppercase tracking-widest text-slate-950 shadow-lg shadow-[#c9a84c]/25 transition-all hover:scale-105 hover:shadow-xl hover:shadow-[#c9a84c]/40"
+			>
+				Apply Now &rarr;
+			</a>
 		</div>
 
-		<p class="mt-12 text-center text-sm italic text-white/80">
-			The only cost is $230 for professional hair &amp; makeup — paid upfront to confirm your
-			session.<br />
-			If you fall in love with your portraits (most do), that $230 applies as a credit toward any
-			additional images.
-		</p>
+	</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 4 — YOUR FULL EXPERIENCE (hummingbird right)
+     ════════════════════════════════════════════════════════ -->
+<section class="relative flex min-h-[65vh] items-center overflow-hidden">
+	<!-- Hummingbird background — birds on right -->
+	<img
+		src="/brand/hummingbird-duo-right.jpg"
+		alt=""
+		class="absolute inset-0 h-full w-full object-cover object-right"
+		loading="lazy"
+	/>
+
+	<!-- Gradient: darker left (text readable), lighter right (birds visible) -->
+	<div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-slate-950/15"></div>
+
+	<!-- Top fade -->
+	<div class="pointer-events-none absolute left-0 right-0 top-0 h-32 bg-gradient-to-b from-slate-950 to-transparent"></div>
+
+	<!-- Bottom fade -->
+	<div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-950"></div>
+
+	<!-- Content: LEFT side -->
+	<div class="relative z-10 w-full px-6 py-20 md:py-0">
+		<div class="mx-auto max-w-lg md:ml-auto md:mr-[62%] md:max-w-sm lg:max-w-md">
+			<!-- Opening statement — same structure as tagline -->
+			<p class="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold">We are looking for five women to join our new empowering portrait series.</p>
+
+			<div class="space-y-5 font-serif text-lg leading-relaxed md:text-xl">
+				<!-- Experience label -->
+				<p class="text-white/90">Your experience includes:</p>
+
+				<!-- Experience items: gold title + white description -->
+				<p><span class="text-gold">A Personalised Preparation Journey</span> — <span class="text-white/90">a one-on-one consultation to craft your story, vision, and style, plus prep guides and styling support so you arrive feeling confident and cared for.</span></p>
+
+				<p><span class="text-gold">An Unforgettable Studio Experience</span> — <span class="text-white/90">expert posing guidance, access to our curated wardrobe of gowns, angel wings, and body jewellery, with up to three complete looks.</span></p>
+
+				<p><span class="text-gold">Your Same-Day Cinematic Reveal</span> — <span class="text-white/90">a breathtaking unveiling of your most stunning portraits right after your session.</span></p>
+
+				<p><span class="text-gold">Three Fully Retouched Digital Portraits</span> — <span class="text-white/90">full-resolution files of your choice, yours to keep forever.</span></p>
+
+				<!-- Investment note — slightly bigger -->
+				<p class="pt-3 text-xl leading-relaxed text-white/90 md:text-2xl">
+					Your investment: a $230 glam fee covering professional hair &amp; makeup — payable upfront, and fully applicable as a credit toward any additional portraits, if you decide so.
+				</p>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -221,8 +309,6 @@
 		</p>
 	</div>
 </section>
-
-<SectionDivider />
 
 <!-- ════════════════════════════════════════════════════════
      SECTION 5 — THE STYLES (Gallery)
@@ -299,8 +385,6 @@
 		</div>
 	</div>
 </section>
-
-<SectionDivider />
 
 <!-- ════════════════════════════════════════════════════════
      SECTION 7 — THE TRANSFORMATION
@@ -637,7 +721,7 @@
      MINIMAL FOOTER
      ════════════════════════════════════════════════════════ -->
 <footer class="border-t border-white/10 bg-[#0d0d0d] py-10 text-center">
-	<div class="mx-auto mb-4 inline-block rounded-sm bg-white px-4 py-2">
+	<div class="mx-auto mb-4 inline-block">
 		<img
 			src="/logo.png"
 			alt="Noran Shine Photography Muse"
