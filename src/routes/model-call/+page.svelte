@@ -75,6 +75,9 @@
 		<img src="/logo.png" alt="Noran Shine Photography Muse" class="w-56 md:w-72" />
 	</div>
 
+	<!-- Bottom fade into next section -->
+	<div class="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-slate-950"></div>
+
 	<!-- Content -->
 	<div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
 		<h1
@@ -116,9 +119,12 @@
 	<!-- Gradient: lighter left (birds visible), darker right (text readable) -->
 	<div class="absolute inset-0 bg-gradient-to-r from-slate-950/20 via-slate-950/55 to-slate-950/88"></div>
 
-	<!-- Content: right side on desktop, centered on mobile -->
+	<!-- Top fade — blends from hero -->
+	<div class="pointer-events-none absolute left-0 right-0 top-0 z-10 h-24 bg-gradient-to-b from-slate-950 to-transparent"></div>
+
+	<!-- Content: starts just after the birds (~46% from left) -->
 	<div class="relative z-10 w-full px-6 py-20 md:py-0">
-		<div class="mx-auto max-w-lg md:ml-auto md:mr-12 md:max-w-md lg:mr-20 lg:max-w-lg">
+		<div class="mx-auto max-w-lg md:ml-[46%] md:max-w-sm lg:max-w-md">
 			<!-- Tagline -->
 			<p class="mb-8 text-[11px] uppercase tracking-[0.3em] text-gold/60">
 				Empowering &bull; Glam &bull; Boudoir Portraits &nbsp;&middot;&nbsp; Noran Shine Studio,
