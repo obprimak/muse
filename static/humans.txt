@@ -1,0 +1,13 @@
+/* TEAM */
+Photographer & Founder: Olga (Noran Shine)
+Location: Lithia, FL, USA
+Site: https://muse.noranshine.com
+
+/* TECHNOLOGY */
+Framework: SvelteKit
+Styling: Tailwind CSS
+Hosting: Vercel
+Fonts: Cormorant Garamond, Inter (Google Fonts)
+
+/* THANKS */
+Built with care for women who are ready to be seen.
