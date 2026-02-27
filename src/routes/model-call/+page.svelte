@@ -637,8 +637,15 @@
      MINIMAL FOOTER
      ════════════════════════════════════════════════════════ -->
 <footer class="border-t border-white/10 bg-[#0d0d0d] py-10 text-center">
+	<div class="mx-auto mb-4 inline-block rounded-sm bg-white px-4 py-2">
+		<img
+			src="/logo.png"
+			alt="Noran Shine Photography Muse"
+			class="h-16 w-auto"
+		/>
+	</div>
 	<p class="text-sm italic text-white/60">
-		Muse by Noran Shine — luxury boudoir photography studio in Lithia, FL.
+		Luxury boudoir photography studio in Lithia, FL.
 	</p>
 	<p class="mt-2 text-xs text-white/40">Lithia, FL</p>
 
