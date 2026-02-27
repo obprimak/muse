@@ -20,7 +20,12 @@
 <nav class="fixed top-0 z-50 w-full border-b border-slate-800/50 bg-slate-950/80 backdrop-blur-md">
 	<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 		<!-- Logo -->
-		<a href="/" class="font-serif text-2xl font-light tracking-editorial text-gold">
+		<a href="/" class="flex items-center gap-2 font-serif text-2xl font-light tracking-editorial text-gold">
+			<img
+				src="/brand/hummingbird-logo-round.jpg"
+				alt="Muse by Noran Shine logo"
+				class="h-10 w-auto"
+			/>
 			Muse
 		</a>
 
