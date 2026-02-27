@@ -176,11 +176,11 @@
 
 	<!-- Content -->
 	<div class="relative z-10 mx-auto max-w-2xl px-6 pb-24 pt-44 text-center">
-		<h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+		<p class="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
 			This is your invitation to experience a full studio session at Noran Shine Studio
-		</h2>
+		</p>
 
-		<p class="mt-5 font-serif text-lg leading-relaxed text-white/80 md:text-xl">
+		<p class="font-serif text-lg leading-relaxed text-white/80 md:text-xl">
 			Complimentary — in exchange for your participation in content creation and your permission
 			to share your story as part of our upcoming campaigns.
 		</p>
@@ -248,10 +248,10 @@
 	<!-- Content: LEFT side -->
 	<div class="relative z-10 w-full px-6 py-20 md:py-0">
 		<div class="mx-auto max-w-lg md:ml-auto md:mr-[62%] md:max-w-sm lg:max-w-md">
-			<div class="space-y-5 font-serif text-lg leading-relaxed md:text-xl">
-				<!-- Opening statement -->
-				<p class="font-sans text-sm font-semibold uppercase tracking-[0.2em] text-gold">We are looking for five women to join our new empowering portrait series.</p>
+			<!-- Opening statement — same structure as tagline -->
+			<p class="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold">We are looking for five women to join our new empowering portrait series.</p>
 
+			<div class="space-y-5 font-serif text-lg leading-relaxed md:text-xl">
 				<!-- Experience label -->
 				<p class="text-white/90">Your experience includes:</p>
 
