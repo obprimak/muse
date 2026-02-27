@@ -212,6 +212,15 @@
 			{/each}
 		</ul>
 
+		<div class="mt-14">
+			<a
+				href="#apply"
+				class="inline-block rounded-full bg-gradient-to-r from-[#a8792a] via-[#c9a84c] to-[#d4b56a] px-12 py-4 font-sans text-sm uppercase tracking-widest text-slate-950 shadow-lg shadow-[#c9a84c]/25 transition-all hover:scale-105 hover:shadow-xl hover:shadow-[#c9a84c]/40"
+			>
+				Apply Now &rarr;
+			</a>
+		</div>
+
 	</div>
 </section>
 
