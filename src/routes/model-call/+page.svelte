@@ -122,6 +122,9 @@
 	<!-- Top fade — blends from hero -->
 	<div class="pointer-events-none absolute left-0 right-0 top-0 z-10 h-24 bg-gradient-to-b from-slate-950 to-transparent"></div>
 
+	<!-- Bottom fade into next section -->
+	<div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-950"></div>
+
 	<!-- Content: starts just after the birds (~50% from left) -->
 	<div class="relative z-10 w-full px-6 py-20 md:py-0">
 		<div class="mx-auto max-w-lg md:ml-[62%] md:max-w-sm lg:max-w-md">
@@ -151,42 +154,65 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════
-     SECTION 3 — THE INVITATION
+     SECTION 3 — THE INVITATION (candlelight)
      ════════════════════════════════════════════════════════ -->
-<section class="relative bg-slate-950 px-6 py-24 md:py-32">
-	<div class="mx-auto max-w-4xl md:flex md:items-center md:gap-12">
-		<!-- Atmospheric accent image -->
-		<div class="mb-8 hidden flex-shrink-0 md:mb-0 md:block md:w-1/3">
-			<img
-				src="/images/model-call/section-candles.jpg"
-				alt="Warm candlelight and gold curtains in the studio"
-				loading="lazy"
-				class="w-full rounded-sm object-cover"
-				style="aspect-ratio: 3/4"
-			/>
-		</div>
+<section class="relative flex min-h-screen items-center justify-center overflow-hidden">
+	<!-- Candlelight background -->
+	<img
+		src="/images/model-call/candlelight.jpg"
+		alt=""
+		class="absolute inset-0 h-full w-full object-cover object-center"
+		loading="lazy"
+	/>
 
-		<div class="text-center md:w-2/3 md:text-left">
-			<h2 class="text-gold">
-				This is not a photoshoot. It's a <span class="text-gold-300">transformation</span>.
-			</h2>
-			<div class="mt-10 space-y-6 text-base leading-relaxed text-slate-300 md:text-lg">
-				<p>
-					We're selecting a few women for an exclusive creative session at Muse by Noran
-					Shine Studio in Lithia, FL. Not models. Not performers. Real women — all ages,
-					all sizes — who are ready to discover something new about themselves.
-				</p>
-				<p>
-					We need to test new sets and props, expand our studio portfolio, and create
-					updated marketing materials. Your story becomes our art. And the portraits you
-					receive will be unlike anything you've ever seen of yourself.
-				</p>
-			</div>
-		</div>
+	<!-- Dark mysterious overlay -->
+	<div class="absolute inset-0 bg-slate-950/65"></div>
+
+	<!-- Top fade — blends from hummingbird section -->
+	<div class="pointer-events-none absolute left-0 right-0 top-0 h-40 bg-gradient-to-b from-slate-950 to-transparent"></div>
+
+	<!-- Bottom fade into next section -->
+	<div class="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-slate-950"></div>
+
+	<!-- Content -->
+	<div class="relative z-10 mx-auto max-w-2xl px-6 py-32 text-center">
+		<!-- Decorative rule -->
+		<div class="mx-auto mb-10 h-px w-12 bg-gold/40"></div>
+
+		<p class="font-serif text-lg leading-relaxed text-white/90 md:text-xl">
+			This is your invitation to experience a full studio session at Noran Shine Studio —
+			complimentary, in exchange for your participation in content creation and your permission
+			to share your story as part of our upcoming campaigns.
+		</p>
+
+		<p class="mt-6 font-serif text-base italic text-white/55">As a thank you, you will receive:</p>
+
+		<ul class="mt-10 space-y-10">
+			{#each [
+				{
+					title: 'Three beautifully retouched portraits',
+					desc: 'Full-resolution digital files of your choice — yours to keep, forever'
+				},
+				{
+					title: 'Your story, honoured',
+					desc: 'Shared through a personal interview and heartfelt testimonial'
+				},
+				{
+					title: 'Your transformation, captured',
+					desc: 'Behind-the-scenes imagery celebrating who you became'
+				}
+			] as { title, desc }}
+				<li class="space-y-2">
+					<div class="mx-auto h-px w-8 bg-gold/40"></div>
+					<p class="mt-3 font-serif text-xl font-light text-gold">{title}</p>
+					<p class="text-sm tracking-wide text-white/60">{desc}</p>
+				</li>
+			{/each}
+		</ul>
+
+		<div class="mx-auto mt-12 h-px w-12 bg-gold/40"></div>
 	</div>
 </section>
-
-<SectionDivider />
 
 <!-- ════════════════════════════════════════════════════════
      SECTION 3 — WHAT YOU RECEIVE
