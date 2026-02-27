@@ -102,7 +102,50 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════
-     SECTION 2 — THE INVITATION
+     SECTION 2 — WHO I'M LOOKING FOR (hummingbird statement)
+     ════════════════════════════════════════════════════════ -->
+<section class="relative flex min-h-[65vh] items-center overflow-hidden">
+	<!-- Hummingbird background -->
+	<img
+		src="/brand/hummingbird-duo-left.jpg"
+		alt=""
+		class="absolute inset-0 h-full w-full object-cover object-left"
+		loading="lazy"
+	/>
+
+	<!-- Gradient: lighter left (birds visible), darker right (text readable) -->
+	<div class="absolute inset-0 bg-gradient-to-r from-slate-950/20 via-slate-950/55 to-slate-950/88"></div>
+
+	<!-- Content: right side on desktop, centered on mobile -->
+	<div class="relative z-10 w-full px-6 py-20 md:py-0">
+		<div class="mx-auto max-w-lg md:ml-auto md:mr-12 md:max-w-md lg:mr-20 lg:max-w-lg">
+			<!-- Tagline -->
+			<p class="mb-8 text-[11px] uppercase tracking-[0.3em] text-gold/60">
+				Empowering &bull; Glam &bull; Boudoir Portraits &nbsp;&middot;&nbsp; Noran Shine Studio,
+				Lithia FL
+			</p>
+
+			<!-- Statement copy -->
+			<div class="space-y-5 font-serif text-lg leading-relaxed text-white/90 md:text-xl">
+				<p>Let me be direct — I am <em>not</em> searching for professional models.</p>
+				<p>
+					I am looking for <span class="text-gold">real women</span>. Women in their 30s, 40s,
+					50s, and 60s — every shape, every story — ready to help bring my next creative vision
+					to life.
+				</p>
+				<p>And I am not a photographer still finding her way.</p>
+				<p>
+					I am a professional, certified, and published portrait artist — expanding into deeper,
+					more empowering photographic experiences for women. And I want <em>you</em> to be part
+					of it.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 3 — THE INVITATION
      ════════════════════════════════════════════════════════ -->
 <section class="relative bg-slate-950 px-6 py-24 md:py-32">
 	<div class="mx-auto max-w-4xl md:flex md:items-center md:gap-12">
