@@ -212,7 +212,6 @@
 			{/each}
 		</ul>
 
-		<div class="mx-auto mt-16 h-px w-12 bg-gold/40"></div>
 	</div>
 </section>
 
