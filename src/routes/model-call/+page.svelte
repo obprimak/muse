@@ -63,7 +63,7 @@
 	<img
 		src="/images/model-call/hero.jpg"
 		alt=""
-		class="absolute inset-0 h-full w-full object-cover"
+		class="absolute inset-0 h-full w-full object-cover object-top"
 		loading="eager"
 	/>
 
@@ -84,6 +84,9 @@
 		>
 			We Are Looking for Our Muses
 		</h1>
+		<p class="mt-4 font-serif text-2xl tracking-wide text-gold md:text-3xl">
+			Be the Face of Our Next Creative Projects
+		</p>
 		<p class="mx-auto mt-6 max-w-2xl text-lg text-slate-300 md:text-xl">
 			An invitation to women who are ready to be seen — beautifully, powerfully, and on their
 			own terms.
