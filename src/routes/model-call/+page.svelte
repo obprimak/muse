@@ -187,7 +187,7 @@
 
 		<p class="mt-6 font-serif text-base italic text-white/55">As a thank you, you will receive:</p>
 
-		<ul class="mt-10 space-y-10">
+		<ul class="mt-12 space-y-14">
 			{#each [
 				{
 					title: 'Three beautifully retouched portraits',
@@ -202,15 +202,17 @@
 					desc: 'Behind-the-scenes imagery celebrating who you became'
 				}
 			] as { title, desc }}
-				<li class="space-y-2">
-					<div class="mx-auto h-px w-8 bg-gold/40"></div>
-					<p class="mt-3 font-serif text-xl font-light text-gold">{title}</p>
-					<p class="text-sm tracking-wide text-white/60">{desc}</p>
+				<li class="space-y-3">
+					<div class="mx-auto h-px w-12 bg-gold/50"></div>
+					<p class="mt-4 font-serif text-2xl font-light tracking-wide text-gold md:text-3xl">
+						{title}
+					</p>
+					<p class="text-base leading-relaxed tracking-wide text-white/70">{desc}</p>
 				</li>
 			{/each}
 		</ul>
 
-		<div class="mx-auto mt-12 h-px w-12 bg-gold/40"></div>
+		<div class="mx-auto mt-16 h-px w-12 bg-gold/40"></div>
 	</div>
 </section>
 
