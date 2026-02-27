@@ -70,9 +70,9 @@
 	<!-- Dark overlay -->
 	<div class="absolute inset-0 bg-slate-950/75"></div>
 
-	<!-- Logo overlay — left side -->
-	<div class="absolute left-8 top-8 z-10 md:left-12 md:top-10">
-		<img src="/logo.png" alt="Noran Shine Photography Muse" class="w-40 md:w-56" />
+	<!-- Logo overlay — slightly left of center -->
+	<div class="absolute left-[43%] top-8 z-10 -translate-x-1/2 md:top-12">
+		<img src="/logo.png" alt="Noran Shine Photography Muse" class="w-56 md:w-72" />
 	</div>
 
 	<!-- Content -->
