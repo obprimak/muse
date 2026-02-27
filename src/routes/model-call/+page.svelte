@@ -156,7 +156,7 @@
 <!-- ════════════════════════════════════════════════════════
      SECTION 3 — THE INVITATION (candlelight)
      ════════════════════════════════════════════════════════ -->
-<section class="relative flex min-h-screen items-center justify-center overflow-hidden">
+<section class="relative flex min-h-screen flex-col justify-start overflow-hidden">
 	<!-- Candlelight background -->
 	<img
 		src="/images/model-call/candlelight.jpg"
@@ -175,13 +175,13 @@
 	<div class="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-slate-950"></div>
 
 	<!-- Content -->
-	<div class="relative z-10 mx-auto max-w-2xl px-6 py-32 text-center">
-		<!-- Decorative rule -->
-		<div class="mx-auto mb-10 h-px w-12 bg-gold/40"></div>
+	<div class="relative z-10 mx-auto max-w-2xl px-6 pb-24 pt-44 text-center">
+		<h2 class="font-serif text-2xl font-light tracking-wide text-gold md:text-3xl">
+			This is your invitation to experience a full studio session at Noran Shine Studio
+		</h2>
 
-		<p class="font-serif text-lg leading-relaxed text-white/90 md:text-xl">
-			This is your invitation to experience a full studio session at Noran Shine Studio —
-			complimentary, in exchange for your participation in content creation and your permission
+		<p class="mt-5 font-serif text-lg leading-relaxed text-white/80 md:text-xl">
+			Complimentary — in exchange for your participation in content creation and your permission
 			to share your story as part of our upcoming campaigns.
 		</p>
 
