@@ -176,7 +176,7 @@
 
 	<!-- Content -->
 	<div class="relative z-10 mx-auto max-w-2xl px-6 pb-24 pt-44 text-center">
-		<h2 class="font-serif text-2xl font-light tracking-wide text-gold md:text-3xl">
+		<h2 class="text-2xl font-semibold uppercase tracking-[0.2em] text-gold md:text-3xl">
 			This is your invitation to experience a full studio session at Noran Shine Studio
 		</h2>
 
@@ -250,7 +250,7 @@
 		<div class="mx-auto max-w-lg md:ml-auto md:mr-[62%] md:max-w-sm lg:max-w-md">
 			<div class="space-y-5 font-serif text-lg leading-relaxed md:text-xl">
 				<!-- Opening statement -->
-				<p class="text-gold">We are looking for five women to join our new empowering portrait series.</p>
+				<p class="font-sans text-lg font-semibold uppercase tracking-[0.2em] text-gold md:text-xl">We are looking for five women to join our new empowering portrait series.</p>
 
 				<!-- Experience label -->
 				<p class="text-white/90">Your experience includes:</p>
