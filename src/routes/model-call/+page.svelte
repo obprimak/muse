@@ -161,7 +161,7 @@
 	<img
 		src="/images/model-call/candlelight.jpg"
 		alt=""
-		class="absolute inset-0 h-full w-full object-cover object-center"
+		class="absolute inset-0 h-full w-full object-cover object-[center_65%]"
 		loading="lazy"
 	/>
 
