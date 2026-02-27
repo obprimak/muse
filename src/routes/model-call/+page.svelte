@@ -225,52 +225,87 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════
-     SECTION 3 — WHAT YOU RECEIVE
+     SECTION 4 — YOUR FULL EXPERIENCE (hummingbird right)
      ════════════════════════════════════════════════════════ -->
-<section class="bg-slate-900 px-6 py-24 md:py-32">
-	<div class="mx-auto max-w-4xl">
-		<h2 class="text-center text-gold">Your Experience Includes</h2>
+<section class="relative flex items-center overflow-hidden py-24 md:min-h-screen md:py-0">
+	<!-- Hummingbird background — birds on right -->
+	<img
+		src="/brand/hummingbird-duo-right.jpg"
+		alt=""
+		class="absolute inset-0 h-full w-full object-cover object-right"
+		loading="lazy"
+	/>
 
-		<ul class="mt-12 grid gap-6 md:grid-cols-2">
-			{#each [
-				'A private studio experience — full styling, wardrobe, and guided posing',
-				'Professional hair & makeup by our in-studio team',
-				'A cinematic slideshow reveal at the end of your session',
-				'3 fully retouched high-res portraits of your choice — yours to keep, forever',
-				'Behind-the-scenes content from your transformation (for you to share)',
-				'Membership in our exclusive referral program'
-			] as item}
-				<li class="flex items-start gap-4">
-					<span class="mt-1 text-lg text-gold">&#10022;</span>
-					<span class="text-slate-300">{item}</span>
-				</li>
-			{/each}
-		</ul>
+	<!-- Gradient: darker left (text readable), lighter right (birds visible) -->
+	<div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-slate-950/15"></div>
 
-		<!-- Product showcase -->
-		<div class="mt-12 grid gap-4 md:grid-cols-2">
-			<img
-				src="/images/model-call/product-framed.jpg"
-				alt="Framed portrait with vintage cameras on shelf"
-				loading="lazy"
-				class="w-full rounded-sm object-cover"
-				style="aspect-ratio: 4/3"
-			/>
-			<img
-				src="/images/model-call/product-print.jpg"
-				alt="Portrait print and album on table"
-				loading="lazy"
-				class="w-full rounded-sm object-cover"
-				style="aspect-ratio: 4/3"
-			/>
+	<!-- Top fade -->
+	<div class="pointer-events-none absolute left-0 right-0 top-0 h-32 bg-gradient-to-b from-slate-950 to-transparent"></div>
+
+	<!-- Bottom fade -->
+	<div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-950"></div>
+
+	<!-- Content: LEFT side -->
+	<div class="relative z-10 w-full px-6 py-10 md:py-0">
+		<div class="mx-auto max-w-lg md:ml-12 md:max-w-sm lg:ml-20 lg:max-w-md">
+			<!-- Tagline -->
+			<p class="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+				Five spots available &nbsp;&middot;&nbsp; No experience needed
+			</p>
+
+			<h2 class="font-serif text-2xl font-light leading-snug tracking-wide text-white md:text-3xl">
+				We are looking for <span class="text-gold">five women</span> to join our new empowering
+				portrait series
+			</h2>
+
+			<p class="mt-3 font-serif text-base italic text-white/55">Your experience includes:</p>
+
+			<!-- Experience items -->
+			<ul class="mt-8 space-y-8">
+				{#each [
+					{
+						title: 'A Personalised Preparation Journey',
+						desc: 'A one-on-one planning consultation to craft your story, vision, and style — plus beautifully designed prep guides and styling support so you arrive feeling confident and cared for.'
+					},
+					{
+						title: 'An Unforgettable Studio Experience',
+						desc: 'A fully private session with expert posing guidance, access to our curated wardrobe — gowns, angel wings, body jewellery — and up to three complete looks.'
+					},
+					{
+						title: 'Your Same-Day Cinematic Reveal',
+						desc: 'Right after your session, a cinematic unveiling of your most breathtaking portraits — a moment that will stay with you.'
+					},
+					{
+						title: 'Three Fully Retouched Digital Portraits',
+						desc: 'Full-resolution files of your choice, yours to keep. Additional images available if you choose to order more.'
+					}
+				] as { title, desc }}
+					<li class="space-y-1.5">
+						<div class="h-px w-10 bg-gold/40"></div>
+						<p class="mt-2 font-serif text-lg font-light text-gold">{title}</p>
+						<p class="text-sm leading-relaxed text-white/65">{desc}</p>
+					</li>
+				{/each}
+			</ul>
+
+			<!-- Investment note -->
+			<p class="mt-10 text-sm italic leading-relaxed text-white/50">
+				Your investment: a $230 glam fee covering professional hair &amp; makeup — payable upfront
+				to confirm your session, and fully applicable as a credit should you choose additional
+				portraits.
+			</p>
+
+			<!-- Creative collaboration note -->
+			<p class="mt-4 text-sm leading-relaxed text-white/45">
+				This is a creative session — we will explore new lighting, posing, sets, and concepts
+				together. Your transformation may inspire many more women to see their own beauty.
+			</p>
+
+			<!-- Spots limited -->
+			<p class="mt-6 text-xs font-semibold uppercase tracking-widest text-gold/70">
+				Spots are very limited — apply below
+			</p>
 		</div>
-
-		<p class="mt-12 text-center text-sm italic text-white/80">
-			The only cost is $230 for professional hair &amp; makeup — paid upfront to confirm your
-			session.<br />
-			If you fall in love with your portraits (most do), that $230 applies as a credit toward any
-			additional images.
-		</p>
 	</div>
 </section>
 
