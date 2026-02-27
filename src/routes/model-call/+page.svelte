@@ -122,11 +122,11 @@
 	<!-- Top fade — blends from hero -->
 	<div class="pointer-events-none absolute left-0 right-0 top-0 z-10 h-24 bg-gradient-to-b from-slate-950 to-transparent"></div>
 
-	<!-- Content: starts just after the birds (~46% from left) -->
+	<!-- Content: starts just after the birds (~50% from left) -->
 	<div class="relative z-10 w-full px-6 py-20 md:py-0">
-		<div class="mx-auto max-w-lg md:ml-[46%] md:max-w-sm lg:max-w-md">
+		<div class="mx-auto max-w-lg md:ml-[50%] md:max-w-sm lg:max-w-md">
 			<!-- Tagline -->
-			<p class="mb-8 text-[11px] uppercase tracking-[0.3em] text-gold/60">
+			<p class="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
 				Empowering &bull; Glam &bull; Boudoir Portraits &nbsp;&middot;&nbsp; Noran Shine Studio,
 				Lithia FL
 			</p>
