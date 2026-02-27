@@ -12,8 +12,8 @@ export default {
 			},
 			colors: {
 				slate: {
-					850: '#1a1f2e',
-					950: '#0c0f1a'
+					850: '#111111',
+					950: '#0d0d0d'
 				},
 				gold: {
 					DEFAULT: '#c9a84c',
@@ -47,8 +47,8 @@ export default {
 				}
 			},
 			backgroundImage: {
-				'luxury-gradient': 'linear-gradient(135deg, #0c0f1a 0%, #1a1f2e 50%, #334155 100%)',
-				'card-gradient': 'linear-gradient(135deg, #0c0f1a 0%, #1a1f2e 100%)',
+				'luxury-gradient': 'linear-gradient(135deg, #0d0d0d 0%, #111111 50%, #1a1a1a 100%)',
+				'card-gradient': 'linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%)',
 				'gold-gradient': 'linear-gradient(135deg, #b08f3a 0%, #c9a84c 50%, #ecc354 100%)'
 			},
 			letterSpacing: {
