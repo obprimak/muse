@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import SectionDivider from '$lib/components/ui/SectionDivider.svelte';
 
 	let formResult: { success?: boolean; error?: string } | null = $state(null);
 	let submitting = $state(false);
@@ -69,6 +70,13 @@
 	<!-- Dark overlay -->
 	<div class="absolute inset-0 bg-slate-950/80"></div>
 
+	<!-- Hummingbird accent -->
+	<img
+		src="/brand/hummingbird-duo-left.jpg"
+		alt=""
+		class="pointer-events-none absolute bottom-0 right-0 max-w-[500px] opacity-20"
+	/>
+
 	<!-- Content -->
 	<div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
 		<h1
@@ -124,6 +132,8 @@
 		</div>
 	</div>
 </section>
+
+<SectionDivider />
 
 <!-- ════════════════════════════════════════════════════════
      SECTION 3 — WHAT YOU RECEIVE
@@ -212,6 +222,8 @@
 	</div>
 </section>
 
+<SectionDivider />
+
 <!-- ════════════════════════════════════════════════════════
      SECTION 5 — THE STYLES (Gallery)
      ════════════════════════════════════════════════════════ -->
@@ -245,8 +257,15 @@
 <!-- ════════════════════════════════════════════════════════
      SECTION 6 — A NOTE FROM OLGA
      ════════════════════════════════════════════════════════ -->
-<section class="bg-slate-950 px-6 py-24 md:py-32">
-	<div class="mx-auto max-w-4xl md:flex md:items-center md:gap-12">
+<section class="relative overflow-hidden bg-slate-950 px-6 py-24 md:py-32">
+	<!-- Hummingbird accent background -->
+	<img
+		src="/brand/hummingbird-single-ray.jpg"
+		alt=""
+		class="pointer-events-none absolute bottom-0 right-0 max-w-[400px] opacity-[0.12]"
+	/>
+
+	<div class="relative mx-auto max-w-4xl md:flex md:items-center md:gap-12">
 		<!-- Portrait -->
 		<div class="mb-8 flex-shrink-0 md:mb-0">
 			<div class="mx-auto h-64 w-64 overflow-hidden rounded-full border-2 border-gold/30 md:h-80 md:w-80">
@@ -280,6 +299,8 @@
 		</div>
 	</div>
 </section>
+
+<SectionDivider />
 
 <!-- ════════════════════════════════════════════════════════
      SECTION 7 — THE TRANSFORMATION
