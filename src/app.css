@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+html {
+	scroll-behavior: smooth;
+}
+
 /* ── Design Tokens (CSS Custom Properties) ── */
 :root {
 	/* Typography */

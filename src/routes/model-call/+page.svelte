@@ -72,7 +72,7 @@
 	<!-- Content -->
 	<div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
 		<h1
-			class="font-serif text-5xl font-light leading-tight tracking-widest text-cream-50 md:text-7xl lg:text-8xl"
+			class="font-serif text-5xl font-light leading-tight tracking-widest text-white md:text-7xl lg:text-8xl"
 		>
 			We Are Looking for Our Muses
 		</h1>
@@ -166,7 +166,7 @@
 			/>
 		</div>
 
-		<p class="mt-12 text-center text-sm italic text-cream-50/80">
+		<p class="mt-12 text-center text-sm italic text-white/80">
 			The only cost is $230 for professional hair &amp; makeup — paid upfront to confirm your
 			session.<br />
 			If you fall in love with your portraits (most do), that $230 applies as a credit toward any
