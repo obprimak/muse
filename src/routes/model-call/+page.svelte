@@ -248,20 +248,25 @@
 	<!-- Content: LEFT side -->
 	<div class="relative z-10 w-full px-6 py-20 md:py-0">
 		<div class="mx-auto max-w-lg md:ml-auto md:mr-[62%] md:max-w-sm lg:max-w-md">
-			<!-- Tagline -->
-			<p class="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-				Your experience includes
-			</p>
+			<div class="space-y-5 font-serif text-lg leading-relaxed md:text-xl">
+				<!-- Opening statement -->
+				<p class="text-gold">We are looking for five women to join our new empowering portrait series.</p>
 
-			<!-- Statement copy -->
-			<div class="space-y-5 font-serif text-lg leading-relaxed text-white/90 md:text-xl">
-				<p>We are looking for <span class="text-gold">five women</span> to join our new empowering portrait series.</p>
-				<p><em>A Personalised Preparation Journey</em> — a one-on-one consultation to craft your story, vision, and style, plus prep guides and styling support.</p>
-				<p><em>An Unforgettable Studio Experience</em> — expert posing guidance, access to our curated wardrobe of gowns, angel wings, and body jewellery, with up to three complete looks.</p>
-				<p><em>Your Same-Day Cinematic Reveal</em> — a breathtaking unveiling of your portraits right after your session.</p>
-				<p><em>Three Fully Retouched Digital Portraits</em> — full-resolution files of your choice, yours to keep forever.</p>
-				<p class="font-serif text-base italic text-white/55">
-					Your investment: a $230 glam fee covering professional hair &amp; makeup — payable upfront, and fully applicable as a credit toward any additional portraits.
+				<!-- Experience label -->
+				<p class="text-white/90">Your experience includes:</p>
+
+				<!-- Experience items: gold title + white description -->
+				<p><span class="text-gold">A Personalised Preparation Journey</span> — <span class="text-white/90">a one-on-one consultation to craft your story, vision, and style, plus prep guides and styling support so you arrive feeling confident and cared for.</span></p>
+
+				<p><span class="text-gold">An Unforgettable Studio Experience</span> — <span class="text-white/90">expert posing guidance, access to our curated wardrobe of gowns, angel wings, and body jewellery, with up to three complete looks.</span></p>
+
+				<p><span class="text-gold">Your Same-Day Cinematic Reveal</span> — <span class="text-white/90">a breathtaking unveiling of your most stunning portraits right after your session.</span></p>
+
+				<p><span class="text-gold">Three Fully Retouched Digital Portraits</span> — <span class="text-white/90">full-resolution files of your choice, yours to keep forever.</span></p>
+
+				<!-- Investment note — slightly bigger -->
+				<p class="pt-3 text-xl leading-relaxed text-white/90 md:text-2xl">
+					Your investment: a $230 glam fee covering professional hair &amp; makeup — payable upfront, and fully applicable as a credit toward any additional portraits, if you decide so.
 				</p>
 			</div>
 		</div>
