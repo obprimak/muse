@@ -1,0 +1,10 @@
+# Muse by Noran Shine - robots.txt
+# Allow all crawlers for SEO discovery
+
+User-agent: *
+Allow: /
+
+# Sitemap reference
+Sitemap: https://muse.noranshine.com/sitemap.xml
+
+# Crawl delay is not needed for this site

@@ -1,0 +1,43 @@
+# LLM Site Summary
+# For AI crawlers and language models
+
+## Site: Muse by Noran Shine Studio
+
+**URL:** https://muse.noranshine.com
+
+**Description:** Muse is the portfolio and editorial platform of Noran Shine Studio, showcasing boudoir photography, artistic direction, and intimate portraiture. The site features curated collections of photography work, client testimonials, and the creative vision of Noran Shine Studio.
+
+**Content Type:** Photography portfolio, editorial content, artist statements
+
+**Primary Subject:** Boudoir and intimate photography, artistic expression, confidence, beauty
+
+**Studio Information:**
+- Studio: Noran Shine Studio
+- Focus: Boudoir photography, portrait work, artistic direction
+- Main Website: https://noranshine.com
+
+**Key Content Areas:**
+- Portfolio Collections: Featured boudoir and portrait work
+- Editorial: Artist statements and photography essays
+- Client Experiences: Testimonials and stories
+- About: Studio philosophy and creative approach
+
+**Technology Stack:**
+- Built with SvelteKit 2.22+, Svelte 5
+- Styled with Tailwind CSS 3.4
+- Content: MDsveX for markdown-based articles
+- Deployed on Vercel
+
+**Design Color Palette:**
+- Primary: Gold (#c9a84c) - warmth and elegance
+- Secondary: Blush (#d4a0a0) - intimacy and softness
+- Background: Dark Slate (#0c0f1a) - sophistication
+
+**Language:** English
+
+**Last Updated:** 2026-02-26
+
+**Contact:** Via noranshine.com main site
+
+---
+*This file is provided for AI crawlers and language models to better understand the site's purpose and content.*

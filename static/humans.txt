@@ -1,0 +1,25 @@
+/* HUMANS.TXT */
+/* humanstxt.org */
+
+/* Team */
+Studio: Noran Shine Studio
+Contact: https://noranshine.com
+Location: Remote
+
+/* Site */
+Last Updated: 2026-02-26
+Language: English
+Charset: UTF-8
+Standard: HTML5, CSS3, JavaScript
+
+/* Components */
+Built with: SvelteKit, Tailwind CSS, MDsveX
+Hosted on: Vercel
+Repository: GitHub
+
+/* About */
+Muse is the portfolio and editorial platform for Noran Shine Studio's boudoir photography work.
+Celebrating confidence, beauty, and artistic expression through intimate photography.
+
+Website: https://muse.noranshine.com
+Main Studio: https://noranshine.com
