@@ -44,7 +44,7 @@
 				<!-- Social Links -->
 				<div class="mt-4 flex gap-4">
 					<a
-						href="https://instagram.com/noranshine"
+						href="https://www.instagram.com/noranshine"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="text-slate-400 transition-colors hover:text-gold"
@@ -57,7 +57,7 @@
 						</svg>
 					</a>
 					<a
-						href="https://facebook.com/noranshine"
+						href="https://www.facebook.com/Noranshinestudio"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="text-slate-400 transition-colors hover:text-gold"
