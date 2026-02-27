@@ -6,28 +6,29 @@
 	let submitting = $state(false);
 
 	const galleryItems = [
-		{ file: 'gallery-01.jpg', style: 'Bare Elegance', alt: 'Pearl drape with red curtain backdrop' },
-		{ file: 'gallery-02.jpg', style: 'Bare Elegance', alt: 'Dramatic dark bodyscape with red heels' },
-		{ file: 'gallery-03.jpg', style: 'Bold & Editorial', alt: 'Red circle chair with fishnet stockings' },
-		{ file: 'gallery-04.jpg', style: 'Old Hollywood', alt: 'Masked woman with red curtain, theatrical' },
-		{ file: 'gallery-05.jpg', style: 'Bare Elegance', alt: 'Back silhouette with red lingerie' },
-		{ file: 'gallery-06.jpg', style: 'Bold & Editorial', alt: 'Black and white dramatic portrait' },
-		{ file: 'gallery-07.jpg', style: 'Classic Elegance', alt: 'Window light silhouette in black and white' },
+		// — Tasteful / fully clothed / portraits —
 		{ file: 'gallery-08.jpg', style: 'Classic Elegance', alt: 'Beauty close-up in warm tones' },
+		{ file: 'gallery-07.jpg', style: 'Classic Elegance', alt: 'Window light silhouette in black and white' },
+		{ file: 'gallery-16.jpg', style: 'Classic Elegance', alt: 'Elegant woman in ruffled leather coat, editorial confidence' },
+		{ file: 'gallery-06.jpg', style: 'Bold & Editorial', alt: 'Black and white dramatic portrait' },
+		// — Old Hollywood / theatrical —
+		{ file: 'gallery-04.jpg', style: 'Old Hollywood', alt: 'Masked woman with red curtain, theatrical' },
 		{ file: 'gallery-09.jpg', style: 'Old Hollywood', alt: 'Gold curtain with warm amber and black lace' },
-		{ file: 'gallery-10.jpg', style: 'Bold & Editorial', alt: 'Red lingerie with black wings, empowered' },
-		{ file: 'gallery-11.jpg', style: 'Bare Elegance', alt: 'Back silhouette with pearl cascade' },
-		{ file: 'gallery-12.jpg', style: 'Soft Romance', alt: 'Pink robe with floral backdrop' },
 		{ file: 'gallery-14.jpg', style: 'Old Hollywood', alt: 'Pink tulle with theatrical amber lighting' },
-		{
-			file: 'gallery-16.jpg',
-			style: 'Classic Elegance',
-			alt: 'Elegant woman in ruffled leather coat, editorial confidence'
-		},
+		// — Soft romance / boudoir warmth —
+		{ file: 'gallery-12.jpg', style: 'Soft Romance', alt: 'Pink robe with floral backdrop' },
 		{ file: 'gallery-17.jpg', style: 'Soft Romance', alt: 'Boudoir closeup, woman lying with golden hair spread' },
-		{ file: 'gallery-18.jpg', style: 'Bold & Editorial', alt: 'Woman in black sheer gown on white background' },
+		// — Bold / lingerie —
+		{ file: 'gallery-20.jpg', style: 'Bold & Editorial', alt: 'Black bodysuit with dramatic fringe gloves' },
+		{ file: 'gallery-10.jpg', style: 'Bold & Editorial', alt: 'Red lingerie with black wings, empowered' },
+		{ file: 'gallery-03.jpg', style: 'Bold & Editorial', alt: 'Red circle chair with fishnet stockings' },
+		// — Bridal boudoir / sheer —
 		{ file: 'gallery-19.jpg', style: 'Bridal Boudoir', alt: 'Bridal boudoir with pearls on white sheets' },
-		{ file: 'gallery-20.jpg', style: 'Bold & Editorial', alt: 'Black bodysuit with dramatic fringe gloves' }
+		{ file: 'gallery-18.jpg', style: 'Bold & Editorial', alt: 'Woman in black sheer gown on white background' },
+		// — Bare elegance —
+		{ file: 'gallery-05.jpg', style: 'Bare Elegance', alt: 'Back silhouette with red lingerie' },
+		{ file: 'gallery-11.jpg', style: 'Bare Elegance', alt: 'Back silhouette with pearl cascade' },
+		{ file: 'gallery-01.jpg', style: 'Bare Elegance', alt: 'Pearl drape with red curtain backdrop' }
 	];
 
 	const collages = [
@@ -523,24 +524,28 @@
 			</p>
 		</div>
 
-		<div class="mt-12 columns-2 gap-4 md:columns-3 lg:columns-4">
-			{#each galleryItems as { file, style, alt }, i}
-				<div class="group relative mb-4 overflow-hidden break-inside-avoid">
-					<img
-						src="/images/model-call/{file}"
-						{alt}
-						loading="lazy"
-						class="w-full rounded-sm bg-slate-800 transition-transform duration-500 group-hover:scale-105"
-					/>
-					<div
-						class="absolute inset-0 flex items-end bg-gradient-to-t from-slate-950/80 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-					>
-						<span class="p-4 font-serif text-sm tracking-wide text-gold">
-							{style}
-						</span>
+		<!-- Horizontal scroll strip -->
+		<div class="relative mt-12">
+			<!-- Left fade hint -->
+			<div class="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-16 bg-gradient-to-r from-slate-900 to-transparent"></div>
+			<!-- Right fade hint -->
+			<div class="pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-16 bg-gradient-to-l from-slate-900 to-transparent"></div>
+
+			<div class="flex gap-3 overflow-x-auto pb-4 scrollbar-thin scrollbar-track-slate-800 scrollbar-thumb-gold/40" style="scroll-snap-type: x mandatory;">
+				{#each galleryItems as { file, style, alt }}
+					<div class="group relative h-80 flex-shrink-0 overflow-hidden rounded-sm bg-slate-800 md:h-96" style="scroll-snap-align: start;">
+						<img
+							src="/images/model-call/{file}"
+							{alt}
+							loading="lazy"
+							class="h-full w-auto max-w-none transition-transform duration-500 group-hover:scale-105"
+						/>
+						<div class="absolute inset-0 flex items-end bg-gradient-to-t from-slate-950/80 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+							<span class="p-4 font-serif text-sm tracking-wide text-gold">{style}</span>
+						</div>
 					</div>
-				</div>
-			{/each}
+				{/each}
+			</div>
 		</div>
 	</div>
 </section>
@@ -574,17 +579,27 @@
 			<h2 class="text-gold">I see you — before the lens ever does.</h2>
 			<div class="mt-6 space-y-4 text-base leading-relaxed text-slate-300">
 				<p>
-					I'm Olga — the photographer and founder of Muse by Noran Shine. I've spent years
-					helping women discover something they didn't expect to find: themselves.
+					I'm Olga — the heart, soul, and lens behind Noran Shine Photography Studio. I
+					specialize in sensual elegance: empowering portraits that help women reconnect
+					with their beauty, confidence, and feminine power.
 				</p>
 				<p>
-					In my studio in Lithia, FL, I create a space where you can exhale. Where the
-					lighting is soft, the pace is slow, and every moment is designed around you — not
-					a shot list.
+					As a self-portrait artist, I've experienced firsthand the transformation that
+					happens in front of the camera. It's not just about how you look — it's about
+					how you feel. That's why I understand every pose, every moment of vulnerability,
+					every wave of emotion. And I guide you through it all with care, artistry, and
+					intention.
 				</p>
 				<p>
-					These sessions aren't about the final image. They're about who you become in the
-					process of creating it.
+					I find inspiration everywhere — in the places I call home, the art I admire, the
+					stories I hear, and the women I meet. I genuinely love people. I see the beauty
+					and strength in every woman who walks through my door — and it's my passion to
+					help her see it too.
+				</p>
+				<p>
+					When you step into my studio, we'll create more than just photos. We'll craft a
+					life-changing experience — uncovering the style, mood, and presence that is
+					entirely, unmistakably you.
 				</p>
 			</div>
 		</div>
@@ -599,7 +614,25 @@
 		<h2 class="text-gold">You already have everything you need.</h2>
 		<p class="mt-4 text-lg text-slate-400">The woman you already are — finally seen.</p>
 
-		<div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+		<div class="mx-auto mt-10 max-w-2xl space-y-5 font-serif text-lg leading-relaxed text-white/90 md:text-xl">
+			<p>
+				I believe with all my heart that every woman is absolutely beautiful — no matter her
+				age, shape, or size. You don't have to look like a model to have portraits you'll
+				fall in love with. I know how to pose, light, and style every woman to bring out her
+				natural beauty.
+			</p>
+			<p>
+				My team of hair and makeup artists are experts in enhancing your best features —
+				making sure you not only look, but feel stunning. The portraits you receive will
+				capture you at your most confident and radiant.
+			</p>
+			<p>
+				You'll leave our studio feeling empowered. And I promise — you'll fall in love with
+				the results.
+			</p>
+		</div>
+
+		<div class="mt-12 grid gap-4 md:grid-cols-2">
 			{#each collages as { file, alt }}
 				<div class="overflow-hidden rounded-sm">
 					<img
@@ -607,7 +640,6 @@
 						{alt}
 						loading="lazy"
 						class="w-full bg-slate-800 object-cover"
-						style="aspect-ratio: 3/4"
 					/>
 				</div>
 			{/each}
