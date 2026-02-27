@@ -248,46 +248,22 @@
 	<!-- Content: LEFT side -->
 	<div class="relative z-10 w-full px-6 py-20 md:py-0">
 		<div class="mx-auto max-w-lg md:ml-0 md:mr-[62%] md:max-w-sm lg:max-w-md">
-			<h2 class="font-serif text-2xl font-light leading-snug tracking-wide text-white md:text-3xl">
-				We are looking for <span class="text-gold">five women</span> to join our new empowering
-				portrait series
-			</h2>
-
-			<p class="mt-3 font-serif text-base italic text-white/55">Your experience includes:</p>
-
-			<!-- Experience items -->
-			<ul class="mt-8 space-y-8">
-				{#each [
-					{
-						title: 'A Personalised Preparation Journey',
-						desc: 'A one-on-one consultation to craft your story, vision, and style — plus prep guides and styling support so you arrive feeling confident and cared for.'
-					},
-					{
-						title: 'An Unforgettable Studio Experience',
-						desc: 'A private session with expert posing guidance, access to our curated wardrobe — gowns, angel wings, body jewellery — and up to three complete looks.'
-					},
-					{
-						title: 'Your Same-Day Cinematic Reveal',
-						desc: 'A cinematic unveiling of your most breathtaking portraits, right after your session.'
-					},
-					{
-						title: 'Three Fully Retouched Digital Portraits',
-						desc: 'Full-resolution files of your choice, yours to keep. Additional images available if you choose to order more.'
-					}
-				] as { title, desc }}
-					<li class="space-y-1.5">
-						<div class="h-px w-10 bg-gold/40"></div>
-						<p class="mt-2 font-serif text-lg font-light text-gold">{title}</p>
-						<p class="text-sm leading-relaxed text-white/65">{desc}</p>
-					</li>
-				{/each}
-			</ul>
-
-			<!-- Investment note -->
-			<p class="mt-8 text-sm italic leading-relaxed text-white/50">
-				Your investment: a $230 glam fee covering professional hair &amp; makeup — payable upfront,
-				and fully applicable as a credit toward any additional portraits.
+			<!-- Tagline -->
+			<p class="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+				Your experience includes
 			</p>
+
+			<!-- Statement copy -->
+			<div class="space-y-5 font-serif text-lg leading-relaxed text-white/90 md:text-xl">
+				<p>We are looking for <span class="text-gold">five women</span> to join our new empowering portrait series.</p>
+				<p><em>A Personalised Preparation Journey</em> — a one-on-one consultation to craft your story, vision, and style, plus prep guides and styling support.</p>
+				<p><em>An Unforgettable Studio Experience</em> — expert posing guidance, access to our curated wardrobe of gowns, angel wings, and body jewellery, with up to three complete looks.</p>
+				<p><em>Your Same-Day Cinematic Reveal</em> — a breathtaking unveiling of your portraits right after your session.</p>
+				<p><em>Three Fully Retouched Digital Portraits</em> — full-resolution files of your choice, yours to keep forever.</p>
+				<p class="font-serif text-base italic text-white/55">
+					Your investment: a $230 glam fee covering professional hair &amp; makeup — payable upfront, and fully applicable as a credit toward any additional portraits.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
