@@ -59,23 +59,21 @@
      SECTION 1 — HERO
      ════════════════════════════════════════════════════════ -->
 <section class="relative flex min-h-screen items-center justify-center overflow-hidden">
-	<!-- Hero background image (video pending from founder) -->
+	<!-- Hero background image -->
 	<img
 		src="/images/model-call/hero.jpg"
 		alt=""
-		class="absolute inset-0 h-full w-full object-cover"
+		class="absolute inset-0 h-full w-full object-cover object-top"
 		loading="eager"
 	/>
 
 	<!-- Dark overlay -->
-	<div class="absolute inset-0 bg-slate-950/80"></div>
+	<div class="absolute inset-0 bg-slate-950/75"></div>
 
-	<!-- Hummingbird accent -->
-	<img
-		src="/brand/hummingbird-duo-left.jpg"
-		alt=""
-		class="pointer-events-none absolute bottom-0 right-0 max-w-[500px] opacity-20"
-	/>
+	<!-- Logo overlay — left side -->
+	<div class="absolute left-8 top-8 z-10 md:left-12 md:top-10">
+		<img src="/logo.png" alt="Noran Shine Photography Muse" class="w-40 md:w-56" />
+	</div>
 
 	<!-- Content -->
 	<div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
@@ -84,13 +82,19 @@
 		>
 			We Are Looking for Our Muses
 		</h1>
+		<p
+			class="mt-4 font-serif text-2xl tracking-wide text-gold md:text-3xl"
+			style="font-family: 'Cormorant Garamond', serif;"
+		>
+			Be the Face of Our Next Creative Projects
+		</p>
 		<p class="mx-auto mt-6 max-w-2xl text-lg text-slate-300 md:text-xl">
 			An invitation to women who are ready to be seen — beautifully, powerfully, and on their
 			own terms.
 		</p>
 		<a
 			href="#apply"
-			class="mt-10 inline-block border border-gold px-8 py-3 font-sans text-sm uppercase tracking-widest text-gold transition-all hover:bg-gold hover:text-slate-950"
+			class="mt-10 inline-block rounded-full bg-gradient-to-r from-[#a8792a] via-[#c9a84c] to-[#d4b56a] px-10 py-3.5 font-sans text-sm uppercase tracking-widest text-slate-950 shadow-lg shadow-[#c9a84c]/25 transition-all hover:scale-105 hover:shadow-xl hover:shadow-[#c9a84c]/40"
 		>
 			Apply to be a Muse &rarr;
 		</a>
@@ -637,7 +641,7 @@
      MINIMAL FOOTER
      ════════════════════════════════════════════════════════ -->
 <footer class="border-t border-white/10 bg-[#0d0d0d] py-10 text-center">
-	<div class="mx-auto mb-4 inline-block rounded-sm bg-white px-4 py-2">
+	<div class="mx-auto mb-4 inline-block">
 		<img
 			src="/logo.png"
 			alt="Noran Shine Photography Muse"
