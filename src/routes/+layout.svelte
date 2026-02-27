@@ -2,21 +2,19 @@
 	import '../app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let { children } = $props();
-
-	$: isStandalone = $page.url.pathname === '/model-call';
 </script>
 
 <div class="flex min-h-screen flex-col">
-	{#if !isStandalone}
+	{#if page.url.pathname !== '/model-call'}
 		<Navigation />
 	{/if}
-	<main class="flex-1" class:pt-16={!isStandalone}>
+	<main class="flex-1" class:pt-16={page.url.pathname !== '/model-call'}>
 		{@render children()}
 	</main>
-	{#if !isStandalone}
+	{#if page.url.pathname !== '/model-call'}
 		<Footer />
 	{/if}
 </div>
