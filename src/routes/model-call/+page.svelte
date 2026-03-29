@@ -51,6 +51,8 @@
 		name="description"
 		content="Apply to be a muse at Noran Shine Studio in Lithia, FL. An exclusive creative boudoir session for real women — all ages, all sizes."
 	/>
+	<link rel="canonical" href="https://muse.noranshine.com/model-call" />
+	<meta property="og:url" content="https://muse.noranshine.com/model-call" />
 	<meta property="og:title" content="Become a Muse | Noran Shine Studio" />
 	<meta
 		property="og:description"
