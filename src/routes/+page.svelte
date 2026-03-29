@@ -1,6 +1,8 @@
 <svelte:head>
 	<title>Muse by Noran Shine</title>
 	<meta name="description" content="Luxury boudoir photography by Noran Shine Studio" />
+	<link rel="canonical" href="https://muse.noranshine.com" />
+	<meta property="og:url" content="https://muse.noranshine.com" />
 </svelte:head>
 
 <main class="flex min-h-screen items-center justify-center">
